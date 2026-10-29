@@ -21,6 +21,15 @@ des chiffres mesurés, et les échecs racontés franchement :
 | **[modular-quantum-trainability](https://github.com/nicobatberger-design/modular-quantum-trainability)** | Recherche indépendante et reproductible sur les circuits quantiques modulaires : une loi de profondeur *g\*(L) ≈ 1,2/√L*, une prédiction annoncée avant le calcul puis confirmée, et les résultats négatifs publiés aussi. |
 | **[opr-app](https://github.com/nicobatberger-design/opr-app)** | Application hors ligne pour relever les réserves de chantier sur le plan et éditer le procès-verbal d'OPR. [Essayer](https://nicobatberger-design.github.io/opr-app/). |
 
+#### Contribution : un bug de Claude Code trouvé à la source
+
+Certains matins, les connecteurs de Claude (Gmail, Drive, Notion…) manquaient pendant toute la session. Avec Claude, j'ai
+suivi la piste dans les journaux de l'extension VS Code, puis dans le code de Claude Code lui-même : au premier lancement
+du jour, la liste des connecteurs reçoit une erreur 401 pendant le renouvellement du jeton, et cette erreur n'est jamais
+retentée. Le Wi-Fi et Google étaient hors de cause.
+**[Signalement #101117 sur le dépôt d'Anthropic](https://github.com/anthropics/claude-code/issues/101117)**, avec la
+méthode pour le reproduire : un autre développeur a confirmé l'analyse, et d'autres signalements y renvoient.
+
 #### Ce que je construis aussi (non publié)
 
 - **Des outils pour le bâtiment** : métré sur plans PDF, pièces écrites tirées d'un devis et d'un plan.
